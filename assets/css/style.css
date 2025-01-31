@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1e3a8a; /* Logo blue */
+    --primary-color: #1e3a8a;
     --primary-light: #3b82f6;
     --text-color: #1f2937;
     --bg-color: #ffffff;
@@ -26,7 +26,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 0.75rem;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     display: flex;
@@ -91,8 +91,8 @@ main {
 }
 
 .main-logo {
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     margin: 2rem auto;
     transition: var(--transition);
@@ -100,14 +100,6 @@ main {
 
 .main-logo:hover {
     transform: scale(1.05);
-}
-
-.address-overlay {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .services {
@@ -144,6 +136,24 @@ footer {
     margin-top: 2rem;
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.company-info {
+    margin-bottom: 0.5rem;
+}
+
+.address {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
 .designer-credit {
     margin-top: 0.5rem;
     font-size: 0.875rem;
@@ -167,7 +177,8 @@ footer {
     }
 
     .main-logo {
-        width: 60%;
+        width: 80%;
+        max-width: 250px;
     }
 
     .service-card:hover {
