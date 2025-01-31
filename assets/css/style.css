@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1e40af;
-    --primary-light: #60a5fa;
+    --primary-color: #1e3a8a; /* Logo blue */
+    --primary-light: #3b82f6;
     --text-color: #1f2937;
     --bg-color: #ffffff;
     --transition: all 0.3s ease;
@@ -33,14 +33,18 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .language-selector {
@@ -81,45 +85,29 @@ main {
     align-items: center;
 }
 
-.company-image {
+.logo-section {
     position: relative;
+    text-align: center;
 }
 
-.image-container {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.main-logo {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin: 2rem auto;
     transition: var(--transition);
 }
 
-.image-container:hover {
-    transform: translateY(-5px);
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+.main-logo:hover {
+    transform: scale(1.05);
 }
 
 .address-overlay {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
     background: rgba(255, 255, 255, 0.9);
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-radius: 0.5rem;
-    color: var(--primary-color);
-}
-
-.company-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
-    color: var(--primary-color);
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .services {
@@ -140,7 +128,7 @@ main {
 }
 
 .service-card:hover {
-    transform: translateY(-3px);
+    transform: translateX(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -153,6 +141,24 @@ footer {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    margin-top: 2rem;
+}
+
+.designer-credit {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.designer-credit a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.designer-credit a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -160,7 +166,15 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .company-info h1 {
-        font-size: 2rem;
+    .main-logo {
+        width: 60%;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .designer-credit {
+        font-size: 0.75rem;
     }
 }
